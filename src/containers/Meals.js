@@ -7,6 +7,7 @@ import * as actionsType from '../redux/actions/actionTypes';
 import Meal from '../components/Meal';
 import { fetchMealsByCategory } from '../redux/actions/thunk';
 import { changeCategory } from '../redux/actions/index';
+import '../index.css';
 
 const Meals = ({
   meals: { meals, status, error }, fetchMealsByCategory, category, changeCategory,
@@ -34,8 +35,10 @@ const Meals = ({
   }
 
   return (
-    <div>
-      {meals && meals.map((meal) => <Meal key={meal.idMeal} meal={meal} />)}
+    <div className="container">
+      <div className="grid grid-column grid-gap-1/5">
+        {meals && meals.map((meal) => <Meal key={meal.idMeal} meal={meal} />)}
+      </div>
     </div>
   );
 };

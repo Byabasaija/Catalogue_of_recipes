@@ -11,3 +11,85 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.meal-card {
+  width: 18rem
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-column {
+  grid-template-columns: 1fr;
+}
+
+.grid-gap-1 {
+  grid-gap: 1rem;
+}
+
+.grid-gap-1\/5 {
+  grid-gap: 1.5rem;
+}
+
+@media screen and (max-width:  600px) {
+  .grid-column {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .grid-column {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .grid-column {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .grid-column {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.link {
+  text-decoration: none;
+}
+
+.ingredients {
+  margin-top: 10px;
+}
+
+.heading {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+
+
+.instructions {
+  margin-top: 2rem;
+  color: #445052;
+}
+
+.items {
+  list-style-type:circle;
+  list-style-position: outside;
+  font-size: 13pt;
+  margin-left: 20px;
+}
+
+.items li {
+  margin-bottom: 8px;
+  line-height: 25px;
+}
+
+.img {
+  border-radius: 16px;
+}
+
+

@@ -66,22 +66,24 @@ const MealDetail = ({ meal: { status, meal, error }, dispatch }) => {
   };
 
   return (
-    <div>
-      <div>
-        <img src={meal.strMealThumb} alt={meal.strMeal} />
-        <div>
-          <h3>{meal.strMeal}</h3>
-          <div>
-            <h4>Ingredients</h4>
-            <ul>
-              {renderIngrediants(meal)}
+    <div className="container">
+      <div className="">
+        <img src={meal.strMealThumb} alt={meal.strMeal} className="img-fluid pt-4 img" />
+        <div className="">
+          <h3 className="heading">{meal.strMeal}</h3>
+          <div className="ingredients">
+            <h4 className="heading">Ingredients</h4>
+            <ul className="items">
+              <li className="">
+                {renderIngrediants(meal)}
+              </li>
             </ul>
           </div>
-          <div>
-            <h4>Instructions</h4>
-            <div data-testid="meal-description">
+          <div className="instructions">
+            <h4 className="heading">Instructions</h4>
+            <ul className="items">
               {renderInstructions(meal.strInstructions)}
-            </div>
+            </ul>
           </div>
         </div>
       </div>
