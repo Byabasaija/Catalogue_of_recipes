@@ -2,10 +2,9 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-
 import * as actionsType from '../redux/actions/actionTypes';
 import Meal from '../components/Meal';
-import { fetchMealsByCategory } from '../redux/actions/thunk';
+import { fetchMealsByCategory } from '../API/api';
 import { changeCategory } from '../redux/actions/index';
 import '../index.css';
 
@@ -17,12 +16,12 @@ const Meals = ({
   useEffect(() => {
     changeCategory(categoryType);
     if (status === actionsType.IDLE_MEALS || categoryType) {
-      fetchMealsByCategory(categoryType || 'beef');
+      fetchMealsByCategory(categoryType || 'vegetarian');
     }
   }, [category]);
 
   if (status === actionsType.LOADING_MEALS) {
-    return <div>Loading ...</div>;
+    return <div className="text-white">Loading ...</div>;
   }
 
   if (status === actionsType.ERROR_MEALS) {
@@ -44,7 +43,7 @@ const Meals = ({
 };
 
 Meals.defaultProps = {
-  category: 'Beef',
+  category: 'vegeterian',
 };
 
 Meals.propTypes = {

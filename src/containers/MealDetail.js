@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { connect } from 'react-redux';
 import React, { useEffect } from 'react';
-import { fetchMealById } from '../redux/actions/thunk';
+import { fetchMealById } from '../API/api';
 import * as actionsType from '../redux/actions/actionTypes';
 
 const MealDetail = ({ meal: { status, meal, error }, dispatch }) => {

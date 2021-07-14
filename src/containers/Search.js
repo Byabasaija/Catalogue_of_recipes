@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useHistory } from 'react-router-dom';
-import { searchMeals } from '../redux/actions/thunk';
+import { searchMeals } from '../API/api';
 
 const Search = ({ searchMeals }) => {
   const history = useHistory();
