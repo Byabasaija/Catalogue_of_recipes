@@ -17,7 +17,7 @@ const Search = ({ searchMeals }) => {
 
   return (
     <form onSubmit={handleSearch}>
-      <input type="search" placeholder="Search your recipes" name="search" />
+      <input type="search" placeholder="Search recipes" name="search" className="form-control me-2" />
     </form>
   );
 };
