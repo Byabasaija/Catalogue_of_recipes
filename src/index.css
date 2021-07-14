@@ -2,8 +2,17 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    'Oxygen',
+    'Ubuntu',
+    'Cantarell',
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -11,16 +20,24 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family:
+    source-code-pro,
+    Menlo,
+    Monaco,
+    Consolas,
+    'Courier New',
     monospace;
 }
+
 .meal-card {
-  width: 18rem
+  width: 18rem;
 }
+
 .pg-title {
   color: white;
   font-family: 'Lobster', cursive;
 }
+
 .grid {
   display: grid;
 }
@@ -37,7 +54,7 @@ code {
   grid-gap: 1.5rem;
 }
 
-@media screen and (max-width:  600px) {
+@media screen and (max-width: 600px) {
   .grid-column {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -77,8 +94,6 @@ code {
   color: #fff;
 }
 
-
-
 .instructions {
   margin-top: 2rem;
   color: #445052;
@@ -86,7 +101,7 @@ code {
 }
 
 .items {
-  list-style-type:circle;
+  list-style-type: circle;
   list-style-position: outside;
   font-size: 13pt;
   margin-left: 20px;
@@ -100,7 +115,4 @@ code {
 .img {
   border-radius: 16px;
   width: 500px;
-
 }
-
-

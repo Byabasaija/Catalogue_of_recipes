@@ -2,7 +2,7 @@ import {
   loadingMeal, errorMeal, successMeal, loadingMeals, errorMeals, successMeals,
 } from '../redux/actions/index';
 
-const API = {
+export const API = {
   BASE_URL: 'https://www.themealdb.com/api/json/v1/1',
   FILTER_ENDPOINT: 'filter.php',
   LOOKUP_ENDPOINT: 'lookup.php',
