@@ -68,10 +68,10 @@ const MealDetail = ({ meal: { status, meal, error }, dispatch }) => {
   return (
     <div className="container">
       <div className="">
-        <img src={meal.strMealThumb} alt={meal.strMeal} className="img-fluid pt-4 img" />
-        <div className="">
-          <h3 className="heading">{meal.strMeal}</h3>
-          <div className="ingredients">
+        <h3 className="heading">{meal.strMeal}</h3>
+        <div className="d-flex justify-content-evenly">
+          <img src={meal.strMealThumb} alt={meal.strMeal} className="img-fluid pt-4 img" />
+          <div className="ingredients ">
             <h4 className="heading">Ingredients</h4>
             <ul className="items">
               <li className="">
@@ -79,12 +79,12 @@ const MealDetail = ({ meal: { status, meal, error }, dispatch }) => {
               </li>
             </ul>
           </div>
-          <div className="instructions">
-            <h4 className="heading">Instructions</h4>
-            <ul className="items">
-              {renderInstructions(meal.strInstructions)}
-            </ul>
-          </div>
+        </div>
+        <div className="instructions">
+          <h4 className="heading">Instructions</h4>
+          <ul className="items">
+            {renderInstructions(meal.strInstructions)}
+          </ul>
         </div>
       </div>
     </div>

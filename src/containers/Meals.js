@@ -12,7 +12,6 @@ const Meals = ({
   meals: { meals, status, error }, fetchMealsByCategory, category, changeCategory,
 }) => {
   const { categoryType } = useParams();
-
   useEffect(() => {
     changeCategory(categoryType);
     if (status === actionsType.IDLE_MEALS || categoryType) {
@@ -35,6 +34,7 @@ const Meals = ({
 
   return (
     <div className="container">
+      <h1 className="pg-title">Recipes</h1>
       <div className="grid grid-column grid-gap-1/5">
         {meals && meals.map((meal) => <Meal key={meal.idMeal} meal={meal} />)}
       </div>

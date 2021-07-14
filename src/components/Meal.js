@@ -10,8 +10,8 @@ const Meal = ({ meal }) => (
       <img src={meal.strMealThumb} alt={meal.strMeal} className="card-img-top" />
       <div>
         <p className="card-subtitle mb-2 text-muted">
-          <span>Prep time</span>
-          <span>30 mins</span>
+          <span className="p-2">View</span>
+          <span>Details</span>
         </p>
         <h5 className="card-title text-dark">
           {meal.strMeal}
