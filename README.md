@@ -27,7 +27,7 @@ The web app has 3 pages:
 - Redux
 - Bootstrap
 - CSS
-## [Live Link](https://60effcadadbc62e6b1239a21--catalogue-of-recipes-02.netlify.app/)
+## [Live Link](https://60f00cc8c30cf803fdf9e5e9--catalogue-of-recipes-02.netlify.app/)
 
 
 # Getting Started with Create React App

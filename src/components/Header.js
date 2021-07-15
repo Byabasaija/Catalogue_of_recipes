@@ -13,13 +13,10 @@ const Header = () => (
           <li className="nav-item">
             <Link to="/" className="nav-link text-white">Home</Link>
           </li>
-          <li>
-            <Link className="nav-link text-white" to="/meals">Meals</Link>
-          </li>
         </ul>
       </div>
     </div>
   </nav>
 );
 
-export default (Header);
+export default Header;
