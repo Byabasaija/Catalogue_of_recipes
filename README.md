@@ -4,15 +4,30 @@
 
 A  ![](https://img.shields.io/badge/Microverse-blueviolet)  capstone project for React-Redux Module
 
-A Bookstore App for sorting through different books
+A catalogue of recipes using built with react and redux. It dispalys a browsable list of items meals fetched from an API
+[mealdb](https://www.themealdb.com/api.php)
+
+The web app has 3 pages:
+- One page with a list of categories available at the [mealdb](https://www.themealdb.com/api.php) API.These are browsable to display meals in each category.
+- One page with meals filtered by category
+- One page with details about the specific meal
+
+## Browse by Category
+![Screenshot](docs/shot.png)
+## Meals filtered by category
+![Screenshot](docs/shot1.png)
+## Specific Meal Details
+![Screenshot](docs/shot2.png)
+
 
 ## Built With
 
 - JavaScript
 - React
 - Redux
+- Bootstrap
 - CSS
-## [Live Link](https://book-store-app101.herokuapp.com//)
+## [Live Link](https://60effcadadbc62e6b1239a21--catalogue-of-recipes-02.netlify.app/)
 
 
 # Getting Started with Create React App
@@ -56,36 +71,6 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
 ## Author
 
 👤 **Pascal Byabasaija**
@@ -97,7 +82,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 **Twitter** [Pascal](https://twitter.com/byabashaijapoet)
 
 ## Acknowledgements
-
+[mealdb](https://www.themealdb.com/api.php)
 
 ## 🤝 Contributing
 

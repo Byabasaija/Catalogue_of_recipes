@@ -57,52 +57,6 @@ describe('dispatch async action to fetch meals by category', () => {
   });
 });
 
-describe('dispatch async action to search meals', () => {
-  test('should create meals in the store', () => {
-    const data = {
-      meals: [
-        {
-          idMeal: '2',
-          strMeal: 'Chicken',
-        },
-      ],
-    };
-
-    const expectedAction = [
-      { type: actionsType.LOADING_MEALS },
-      { data: data.meals, type: actionsType.SUCCESS_MEALS },
-    ];
-
-    fetchMock.getOnce(`${API.BASE_URL}/${API.SEARCH_ENDPOINT}/?s=chicken`, {
-      body: data,
-      headers: { 'content-type': 'application/json' },
-    });
-
-    const store = mockStore({});
-
-    return store.dispatch(actions.searchMeals('chicken')).then(() => {
-      expect(store.getActions()).toEqual(expectedAction);
-    });
-  });
-
-  test('should create error in the store', () => {
-    const expectedAction = [
-      { type: actionsType.LOADING_MEALS },
-      { error: 'Error while fetching data.', type: actionsType.ERROR_MEALS },
-    ];
-
-    fetchMock.getOnce(`${API.BASE_URL}/${API.SEARCH_ENDPOINT}/?s=chicken`, {
-      headers: { 'content-type': 'application/json' },
-    });
-
-    const store = mockStore({});
-
-    return store.dispatch(actions.searchMeals('chicken')).then(() => {
-      expect(store.getActions()).toEqual(expectedAction);
-    });
-  });
-});
-
 describe('dispatch async action to fetch meal by id', () => {
   test('should create meal in the store', () => {
     const data = {

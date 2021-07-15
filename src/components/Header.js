@@ -1,11 +1,10 @@
 import { Link } from 'react-router-dom';
 import React from 'react';
-import Search from '../containers/Search';
 
 const Header = () => (
   <nav className="navbar navbar-expand-lg navbar-light bg-dark">
     <div className="container-fluid">
-      <span className="navbar-brand text-white pg-title" href="#">Catalogue of Recipes</span>
+      <span className="navbar-brand text-white pg-title pl-5" href="#">Catalogue of Recipes</span>
       <button className="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon text-white" />
       </button>
@@ -18,10 +17,6 @@ const Header = () => (
             <Link className="nav-link text-white" to="/meals">Meals</Link>
           </li>
         </ul>
-      </div>
-
-      <div className="d-flex">
-        <Search />
       </div>
     </div>
   </nav>

@@ -5,7 +5,7 @@ import Category from '../components/Category';
 
 const Categories = ({ categories }) => (
   <div className="container">
-    <h1 className="pg-title">Browse Categories</h1>
+    <h1 className="pg-title">Browse in Categories</h1>
     <div className="grid grid-column grid-gap-1/5">
       {categories ? categories.map((category) => <Category key={category.idCategory} category={category} />) : 'No categories'}
     </div>
