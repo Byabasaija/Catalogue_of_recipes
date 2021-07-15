@@ -2,10 +2,10 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import * as actionsType from '../redux/actions/actionTypes';
+import * as actionsType from '../actions/actionTypes';
 import Meal from '../components/Meal';
-import { fetchMealsByCategory } from '../API/api';
-import { changeCategory } from '../redux/actions/index';
+import { fetchMealsByCategory } from '../api/api';
+import { changeCategory } from '../actions/index';
 import '../index.css';
 
 const Meals = ({

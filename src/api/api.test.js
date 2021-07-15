@@ -2,7 +2,7 @@ import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import fetchMock from 'fetch-mock';
 import * as actions from './api';
-import * as actionsType from '../redux/actions/actionTypes';
+import * as actionsType from '../actions/actionTypes';
 import { API } from './api';
 
 const mockStore = configureMockStore([thunk]);
@@ -16,8 +16,8 @@ describe('dispatch async action to fetch meals by category', () => {
     const data = {
       meals: [
         {
-          idMeal: '123',
-          strMeal: 'First meal',
+          idMeal: '1',
+          strMeal: 'Beef',
         },
       ],
     };
@@ -62,8 +62,8 @@ describe('dispatch async action to search meals', () => {
     const data = {
       meals: [
         {
-          idMeal: '123',
-          strMeal: 'Beef meal',
+          idMeal: '2',
+          strMeal: 'Chicken',
         },
       ],
     };
@@ -73,14 +73,14 @@ describe('dispatch async action to search meals', () => {
       { data: data.meals, type: actionsType.SUCCESS_MEALS },
     ];
 
-    fetchMock.getOnce(`${API.BASE_URL}/${API.SEARCH_ENDPOINT}/?s=beef`, {
+    fetchMock.getOnce(`${API.BASE_URL}/${API.SEARCH_ENDPOINT}/?s=chicken`, {
       body: data,
       headers: { 'content-type': 'application/json' },
     });
 
     const store = mockStore({});
 
-    return store.dispatch(actions.searchMeals('beef')).then(() => {
+    return store.dispatch(actions.searchMeals('chicken')).then(() => {
       expect(store.getActions()).toEqual(expectedAction);
     });
   });
@@ -91,13 +91,13 @@ describe('dispatch async action to search meals', () => {
       { error: 'Error while fetching data.', type: actionsType.ERROR_MEALS },
     ];
 
-    fetchMock.getOnce(`${API.BASE_URL}/${API.SEARCH_ENDPOINT}/?s=beef`, {
+    fetchMock.getOnce(`${API.BASE_URL}/${API.SEARCH_ENDPOINT}/?s=chicken`, {
       headers: { 'content-type': 'application/json' },
     });
 
     const store = mockStore({});
 
-    return store.dispatch(actions.searchMeals('beef')).then(() => {
+    return store.dispatch(actions.searchMeals('chicken')).then(() => {
       expect(store.getActions()).toEqual(expectedAction);
     });
   });
@@ -108,7 +108,7 @@ describe('dispatch async action to fetch meal by id', () => {
     const data = {
       meals: [
         {
-          idMeal: '123',
+          idMeal: '2',
           strMeal: 'Beef meal',
         },
       ],
@@ -119,14 +119,14 @@ describe('dispatch async action to fetch meal by id', () => {
       { data: data.meals[0], type: actionsType.SUCCESS_MEAL },
     ];
 
-    fetchMock.getOnce(`${API.BASE_URL}/${API.LOOKUP_ENDPOINT}/?i=123`, {
+    fetchMock.getOnce(`${API.BASE_URL}/${API.LOOKUP_ENDPOINT}/?i=1`, {
       body: data,
       headers: { 'content-type': 'application/json' },
     });
 
     const store = mockStore({});
 
-    return store.dispatch(actions.fetchMealById('123')).then(() => {
+    return store.dispatch(actions.fetchMealById('1')).then(() => {
       expect(store.getActions()).toEqual(expectedAction);
     });
   });
@@ -137,13 +137,13 @@ describe('dispatch async action to fetch meal by id', () => {
       { error: 'Error while fetching data.', type: actionsType.ERROR_MEAL },
     ];
 
-    fetchMock.getOnce(`${API.BASE_URL}/${API.LOOKUP_ENDPOINT}/?i=123`, {
+    fetchMock.getOnce(`${API.BASE_URL}/${API.LOOKUP_ENDPOINT}/?i=1`, {
       headers: { 'content-type': 'application/json' },
     });
 
     const store = mockStore({});
 
-    return store.dispatch(actions.fetchMealById('123')).then(() => {
+    return store.dispatch(actions.fetchMealById('1')).then(() => {
       expect(store.getActions()).toEqual(expectedAction);
     });
   });

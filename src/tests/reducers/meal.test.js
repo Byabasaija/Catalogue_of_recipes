@@ -1,5 +1,5 @@
-import meal from '../../redux/reducers/meal';
-import * as actionsType from '../../redux/actions/actionTypes';
+import meal from '../../reducers/meal';
+import * as actionsType from '../../actions/actionTypes';
 
 describe('meal reducer', () => {
   let initialState;

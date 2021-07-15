@@ -1,5 +1,5 @@
-import category from '../../redux/reducers/category';
-import * as actionsType from '../../redux/actions/actionTypes';
+import category from '../../reducers/category';
+import * as actionsType from '../../actions/actionTypes';
 
 describe('category reducer', () => {
   test('should return initial state', () => {

@@ -1,6 +1,6 @@
 import {
   loadingMeal, errorMeal, successMeal, loadingMeals, errorMeals, successMeals,
-} from '../redux/actions/index';
+} from '../actions/index';
 
 export const API = {
   BASE_URL: 'https://www.themealdb.com/api/json/v1/1',

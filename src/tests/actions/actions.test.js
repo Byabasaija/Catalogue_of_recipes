@@ -1,5 +1,5 @@
-import * as actions from '../../redux/actions/index';
-import * as actionsType from '../../redux/actions/actionTypes';
+import * as actions from '../../actions/index';
+import * as actionsType from '../../actions/actionTypes';
 
 test('should create an action to load meals', () => {
   const expectedAction = {

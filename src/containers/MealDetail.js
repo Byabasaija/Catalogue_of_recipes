@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 import { connect } from 'react-redux';
 import React, { useEffect } from 'react';
-import { fetchMealById } from '../API/api';
-import * as actionsType from '../redux/actions/actionTypes';
+import { fetchMealById } from '../api/api';
+import * as actionsType from '../actions/actionTypes';
 
 const MealDetail = ({ meal: { status, meal, error }, dispatch }) => {
   const { id } = useParams();
