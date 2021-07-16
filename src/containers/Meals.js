@@ -34,7 +34,7 @@ const Meals = ({
 
   return (
     <div className="container">
-      <h1 className="pg-title">Recipes</h1>
+      <h1 className="pg-title text-center">Catalogue of Recipes</h1>
       <div className="grid grid-column grid-gap-1/5">
         {meals && meals.map((meal) => <Meal key={meal.idMeal} meal={meal} />)}
       </div>
@@ -60,6 +60,7 @@ Meals.propTypes = {
 const mapStateToProps = (state) => ({
   meals: state.meals,
   category: state.category,
+  cat: state.categories.categories,
 });
 
 const mapDispatchToProps = (dispatch) => ({

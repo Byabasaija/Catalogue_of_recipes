@@ -1,10 +1,13 @@
 import { Link } from 'react-router-dom';
 import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+// import Categories from '../containers/Categories';
 
-const Header = () => (
+const Header = ({ categories }) => (
   <nav className="navbar navbar-expand-lg navbar-light bg-dark">
-    <div className="container-fluid">
-      <span className="navbar-brand text-white pg-title pl-5" href="#">Catalogue of Recipes</span>
+    <div className="container">
+      <span className="navbar-brand text-white pg-title" href="#">Catalogue of Recipes</span>
       <button className="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span className="navbar-toggler-icon text-white" />
       </button>
@@ -13,10 +16,42 @@ const Header = () => (
           <li className="nav-item">
             <Link to="/" className="nav-link text-white">Home</Link>
           </li>
+          <li className="nav-item dropdown">
+            <span
+              className="nav-link dropdown-toggle text-white"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Categories
+            </span>
+            <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
+              {categories.map((category) => (
+                <li key={category.strCategory}>
+                  <Link to={`/meals/${category.strCategory}`} className="dropdown-item">
+                    {category.strCategory}
+                  </Link>
+                </li>
+              ))}
+
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
 );
+Header.propTypes = {
+  categories: PropTypes.arrayOf(PropTypes.object),
+};
 
-export default Header;
+Header.defaultProps = {
+  categories: [],
+};
+const mapStateToProps = (state) => ({
+  categories: state.categories,
+});
+
+export default connect(mapStateToProps)(Header);
