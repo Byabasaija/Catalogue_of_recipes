@@ -12,8 +12,6 @@ The web app has 3 pages:
 - One page with meals filtered by category
 - One page with details about the specific meal
 
-## Browse by Category
-![Screenshot](docs/shot.png)
 ## Meals filtered by category
 ![Screenshot](docs/shot1.png)
 ## Specific Meal Details
@@ -29,8 +27,22 @@ The web app has 3 pages:
 - CSS
 ## [Live Link](https://catalogue-of-recipess.herokuapp.com/)
 
-## [Presentation](https://www.youtube.com/watch?v=umzZ0TgKHcA)
-# Getting Started with Create React App
+## [Presentation](https://youtu.be/55BrjpP8nOk)
+
+
+# Getting Started 
+To get started clone this repo
+```
+https://github.com/Byabasaija/Catalogue_of_recipes.git
+```
+Go to the project directory
+```
+npm install
+npm start
+```
+
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -95,9 +107,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+MIT
