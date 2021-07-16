@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-// import Categories from '../containers/Categories';
 
 const Header = ({ categories }) => (
   <nav className="navbar navbar-expand-lg navbar-light bg-dark">

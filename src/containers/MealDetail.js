@@ -56,7 +56,7 @@ const MealDetail = ({ meal: { status, meal, error }, dispatch }) => {
     if (instructions) {
       const list = instructions.split(new RegExp(/\n/)).filter((item) => item.length > 1);
       return (
-        <ul>
+        <ul className="items">
           {/* eslint-disable-next-line */}
           {list.map((item, index) => <li key={index}>{item}</li>)}
         </ul>
@@ -69,22 +69,18 @@ const MealDetail = ({ meal: { status, meal, error }, dispatch }) => {
     <div className="container">
       <div className="">
         <h3 className="heading">{meal.strMeal}</h3>
-        <div className="d-flex justify-content-evenly">
+        <div className="d-lg-flex justify-content-evenly">
           <img src={meal.strMealThumb} alt={meal.strMeal} className="img-fluid pt-4 img" />
           <div className="ingredients ">
             <h4 className="heading">Ingredients</h4>
             <ul className="items">
-              <li className="">
-                {renderIngrediants(meal)}
-              </li>
+              {renderIngrediants(meal)}
             </ul>
           </div>
         </div>
         <div className="instructions">
           <h4 className="heading">Instructions</h4>
-          <ul className="items">
-            {renderInstructions(meal.strInstructions)}
-          </ul>
+          {renderInstructions(meal.strInstructions)}
         </div>
       </div>
     </div>
