@@ -27,7 +27,6 @@ The web app has 3 pages:
 - CSS
 ## [Live Link](https://catalogue-of-recipess.herokuapp.com/)
 
-## [Presentation](https://youtu.be/55BrjpP8nOk)
 
 
 # Getting Started 
