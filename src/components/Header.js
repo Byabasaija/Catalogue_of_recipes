@@ -22,7 +22,7 @@ const Header = ({ categories }) => (
               aria-expanded="false"
             >
               Change categories
-              <span role="img" aria-label="sheep">👉</span>
+              <span role="img" aria-label="backhand">👉</span>
             </span>
             <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
               {categories.map((category) => (
