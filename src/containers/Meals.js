@@ -7,6 +7,7 @@ import Meal from '../components/Meal';
 import { fetchMealsByCategory } from '../api/api';
 import { changeCategory } from '../actions/index';
 import '../index.css';
+import Loading from '../components/Loading';
 
 const Meals = ({
   meals: { meals, status, error }, fetchMealsByCategory, category, changeCategory,
@@ -20,7 +21,7 @@ const Meals = ({
   }, [category]);
 
   if (status === actionsType.LOADING_MEALS) {
-    return <div className="text-white text-center">Loading ...</div>;
+    return <Loading />;
   }
 
   if (status === actionsType.ERROR_MEALS) {
