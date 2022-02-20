@@ -20,7 +20,7 @@ const Meals = ({
   }, [category]);
 
   if (status === actionsType.LOADING_MEALS) {
-    return <div className="text-white">Loading ...</div>;
+    return <div className="text-white text-center">Loading ...</div>;
   }
 
   if (status === actionsType.ERROR_MEALS) {
@@ -34,7 +34,10 @@ const Meals = ({
 
   return (
     <div className="container">
-      <h1 className="pg-title text-center">Catalogue of Recipes</h1>
+      <h1 className="pg-title text-center">
+        Category:
+        { category || 'Vegetarian'}
+      </h1>
       <div className="grid grid-column grid-gap-1/5">
         {meals && meals.map((meal) => <Meal key={meal.idMeal} meal={meal} />)}
       </div>
